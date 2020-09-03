@@ -42,7 +42,7 @@ SECRET_KEY = SECRETS['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = SECRETS['DEBUG']
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kamil-jakubczak.herokuapp.com']
 
 
 # Application definition
