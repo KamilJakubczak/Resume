@@ -1,7 +1,9 @@
 from django.db import models
 
 # Create your models here.
-#EDUCATION
+# EDUCATION
+
+
 class Education(models.Model):
     school_name = models.CharField(max_length=100)
     course_name = models.CharField(max_length=100)
@@ -10,16 +12,23 @@ class Education(models.Model):
     grade = models.DecimalField(decimal_places=1, max_digits=2)
     start_date = models.DateField()
     end_date = models.DateField()
-    school_logo = models.ImageField(upload_to='media/cv/education/')
+    school_logo = models.ImageField(
+        upload_to='media/cv/education/',
+        blank=True,
+        null=True)
     order = models.IntegerField(unique=True, null=True)
     disabled = models.BooleanField(default=True)
 
     def __str__(self):
         return self.school_name + '-' + self.course_name
 
+
 class Company(models.Model):
     company_name = models.CharField(max_length=100)
-    compoany_logo = models.ImageField(upload_to='media/cv/jobs/')
+    compoany_logo = models.ImageField(
+        upload_to='media/cv/jobs/',
+        blank=True,
+        null=True)
 
     def __str__(self):
         return self.company_name
@@ -36,7 +45,7 @@ class Position(models.Model):
 
     def __str__(self):
         return self.company.company_name \
-                + '-' + self.position_title
+            + '-' + self.position_title
 
 
 class Provider(models.Model):
@@ -45,13 +54,14 @@ class Provider(models.Model):
     def __str__(self):
         return self.name
 
+
 class Course(models.Model):
     course_name = models.CharField(max_length=100)
     provider = models.ForeignKey(Provider, on_delete=models.CASCADE)
     completion_date = models.DateField(blank=True, null=True)
     certificat_id = models.CharField(max_length=100, blank=True, null=True)
-    certificat_img = models.ImageField(upload_to='media/cv/courses', \
-                                       blank=True, \
+    certificat_img = models.ImageField(upload_to='media/cv/courses',
+                                       blank=True,
                                        null=True)
     description = models.TextField(blank=True, null=True)
     order = models.IntegerField(unique=True, null=True)
@@ -60,10 +70,12 @@ class Course(models.Model):
     def __str__(self):
         return self.course_name + '-' + self.provider.name
 
+
 class Skill(models.Model):
     name = models.CharField(max_length=50)
     icon = models.CharField(max_length=50)
-    image = models.ImageField(upload_to='media/cv/skills',blank=True,null=True)
+    image = models.ImageField(
+        upload_to='media/cv/skills', blank=True, null=True)
     order = models.IntegerField(unique=True, null=True)
     disabled = models.BooleanField(default=False)
     desc = models.TextField()
@@ -71,10 +83,11 @@ class Skill(models.Model):
     def __str__(self):
         return self.name
 
+
 class Info(models.Model):
     title = models.CharField(max_length=50)
-    icon = models.ImageField(upload_to='media/cv/info',blank=True,null=True)
-    description = models.CharField(max_length=100)
+    icon = models.ImageField(upload_to='media/cv/info', blank=True, null=True)
+    description = models.TextField()
     order = models.IntegerField(unique=True, null=True)
     disabled = models.BooleanField(default=True)
     icon_code = models.CharField(max_length=50)
@@ -82,3 +95,15 @@ class Info(models.Model):
     def __str__(self):
         return self.title
 
+
+class Project(models.Model):
+    title = models.CharField(max_length=150)
+    description = models.TextField()
+    link = models.URLField(blank=True, null=True)
+    icon = models.ImageField(
+        upload_to='media/cv/projects',
+        blank=True,
+        null=True)
+    technologies = models.ManyToManyField(Skill)
+    order = models.IntegerField(unique=True, null=True)
+    disabled = models.BooleanField(default=True)
