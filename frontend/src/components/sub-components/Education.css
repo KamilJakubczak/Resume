@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   display: grid !important;
-  grid-template-columns: repeat(2, minmax(540px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(420px, 2fr));
   grid-row: auto;
   grid-gap: 0 40px;
   margin: 50px auto;
@@ -26,6 +26,7 @@ h2 {
   justify-content: center;
   align-items: center;
   background-color: transparent;
+  margin: 20px;
   background: linear-gradient(90deg, #050505, #262626);
 }
 .education-container .box:last-child {
