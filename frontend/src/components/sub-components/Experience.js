@@ -1,28 +1,28 @@
-import React, { Component, Fragment } from 'react'
-import './Experience.css';
+import React, { Component, Fragment } from "react";
+import "./Experience.css";
 
 // import 'react-vertical-timeline-component/style.min.css';
-class  Experience extends Component{
+class Experience extends Component {
+  state = {
+    details: [],
+  };
 
-    state = {
-        details: [],
-    };
-
-    componentDidMount(){
-        fetch('/cv/positions/',{
-            method: 'GET'
-        }).then(resp => resp.json())
-        .then(res => this.setState({details:res}))
-        .catch(error => console.log(error))
-     
-    }
-    render(){
-      return (
-        <Fragment>
-          <h2>Experience</h2><hr className="line-title"></hr>
-        <div id="experience" className="timeline">
+  componentDidMount() {
+    fetch("/cv/positions/", {
+      method: "GET",
+    })
+      .then((resp) => resp.json())
+      .then((res) => this.setState({ details: res }))
+      .catch((error) => console.log(error));
+  }
+  render() {
+    return (
+      <Fragment>
+        <h2 id="experience">Experience</h2>
+        <hr className="line-title"></hr>
+        <div className="timeline">
           <ul>
-            {this.state.details.map(detail => { 
+            {this.state.details.map((detail) => {
               return (
                 <li>
                   <hr></hr>
@@ -36,14 +36,14 @@ class  Experience extends Component{
                   </div>
                   <hr></hr>
                 </li>
-                
-              )
+              );
             })}
-          </ul><div className="timeline-after"></div>
+          </ul>
+          <div className="timeline-after"></div>
         </div>
-        </Fragment>
-      )
-    }
+      </Fragment>
+    );
+  }
 }
 
 export default Experience;

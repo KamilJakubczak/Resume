@@ -16,6 +16,9 @@
   padding: 40px;
   z-index: 0;
 }
+h2 {
+  padding-top: 100px;
+}
 .education-container .box {
   position: relative;
   height: 400px;
@@ -50,6 +53,8 @@
   top: -60px;
   font-size: 10em;
   right: 20px;
+  left: 20px;
+  text-align: center;
   margin: 0;
   padding: 0;
   color: rgba(255, 255, 255, 0.4);

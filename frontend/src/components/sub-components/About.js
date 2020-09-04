@@ -17,9 +17,9 @@ class About extends Component {
   render() {
     return (
       <Fragment>
-        <h2>About me</h2>
+        <h2 id="about">About me</h2>
         <hr className="line-title"></hr>
-        <div id="about" className="about-container">
+        <div className="about-container">
           {this.state.details.map((detail) => {
             return (
               <div>

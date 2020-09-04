@@ -13,7 +13,7 @@
 
     <title>Kamil Jakubczak</title>
 
-    <!-- 
+    <!--
       BOOTSTRAP
      -->
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/cover/">
@@ -35,7 +35,7 @@
     <div id='progressbar'></div>
     <div id="scrollPath"></div>
     <div class="cover-container d-flex w-100 h-100 mx-auto flex-column" id="app"></div>  {% load static %}
-   
+
   </body>
   <script src="{% static "frontend/main.js" %}"></script>
   <script>
@@ -43,16 +43,16 @@
     let progress = document.getElementById('progressbar');
     let totalHeight = document.body.scrollHeight - window.innerHeight;
         window.onscroll = () => {
-          
+
     let progressHeight = (window.pageYOffset / totalHeight * 100);
     progress.style.height = progressHeight + "%";
-    
+
   }
   // BTN EFFECTS
   const buttons = document.querySelectorAll('a');
-    
+
     buttons.forEach(btn=>{
-      
+
       btn.addEventListener('click', function(e){
         let x = e.clientX-e.target.offsetLeft;
         let y = e.clientY-e.target.offsetTop;
