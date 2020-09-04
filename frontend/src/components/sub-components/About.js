@@ -17,7 +17,7 @@ class About extends Component {
   render() {
     return (
       <Fragment>
-        <h2 id="about">About me</h2>
+        <h2 id="about">About</h2>
         <hr className="line-title"></hr>
         <div className="about-container">
           {this.state.details.map((detail) => {
@@ -27,7 +27,14 @@ class About extends Component {
                   <div className="img-box">
                     <img src={detail.icon} />
                   </div>
-                  <div className="text-box">{detail.description}</div>
+                  <div className="text-box">
+                    {detail.description}
+                    <div className="contact-box">
+                      <div className="contact-point">asd</div>
+                      <div className="contact-point">basdb</div>
+                      <div className="contact-point">casds</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             );

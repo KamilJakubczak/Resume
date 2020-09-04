@@ -48,7 +48,7 @@
   align-items: center;
   background-color: transparent;
   width: fit-content;
-  background: linear-gradient(90deg, #030303, #0e0f0f) !important;
+  background: linear-gradient(90deg, #090a0b, #0e0f0f) !important;
 }
 .img-box:before {
   content: "";
@@ -103,4 +103,11 @@ img {
   100% {
     background-position: 0 0;
   }
+}
+.contact-box {
+  display: flex;
+}
+
+.contact-point {
+  flex: 1;
 }
