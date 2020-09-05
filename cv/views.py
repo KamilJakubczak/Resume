@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .serializers import PositionSerializer, EducationSerializer, ProjectSerializer
-from .serializers import CourseSerializer, SkillSerializer, InfoSerializer
-from .models import Position, Education, Course, Skill, Info, Project
+from .serializers import CourseSerializer, SkillSerializer, InfoSerializer, SocialMediaSerializer
+from .models import Position, Education, Course, Skill, Info, Project, SocialMedia
 from rest_framework import viewsets
 
 # VIEWSETS
@@ -49,3 +49,10 @@ class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.filter(disabled=False) \
         .order_by('order')
     serializer_class = ProjectSerializer
+
+
+class SocialMediaViewSet(viewsets.ModelViewSet):
+
+    queryset = SocialMedia.objects.filter(disabled=False) \
+        .order_by('order')
+    serializer_class = SocialMediaSerializer

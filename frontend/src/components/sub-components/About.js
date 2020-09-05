@@ -3,6 +3,7 @@ import "./About.css";
 class About extends Component {
   state = {
     details: [],
+    socialMedia: [],
   };
 
   componentDidMount() {
@@ -11,6 +12,13 @@ class About extends Component {
     })
       .then((resp) => resp.json())
       .then((res) => this.setState({ details: res }))
+      .catch((error) => console.log(error));
+
+    fetch("/cv/social-media/", {
+      method: "GET",
+    })
+      .then((resp) => resp.json())
+      .then((res) => this.setState({ socialMedia: res }))
       .catch((error) => console.log(error));
   }
 
@@ -30,9 +38,20 @@ class About extends Component {
                   <div className="text-box">
                     {detail.description}
                     <div className="contact-box">
-                      <div className="contact-point">asd</div>
-                      <div className="contact-point">basdb</div>
-                      <div className="contact-point">casds</div>
+                      <div className="find-me-on">
+                        <h4>Find me on</h4>
+                      </div>
+                      {this.state.socialMedia.map((media) => {
+                        return (
+                          <div className="contact-point">
+                            <a href={media.link} target="_blank">
+                              <h3>
+                                <i className={media.icon_code}></i>
+                              </h3>
+                            </a>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>

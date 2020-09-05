@@ -106,8 +106,15 @@ img {
 }
 .contact-box {
   display: flex;
+  /* position: absolute; */
+  bottom: 0;
 }
 
 .contact-point {
   flex: 1;
+  margin: 10px;
+}
+.find-me-on {
+  flex: 3;
+  margin: 10px;
 }
