@@ -18,9 +18,9 @@ class Projects extends Component {
   render() {
     return (
       <Fragment>
-        <h2>Experience</h2>
+        <h2 id="projects">Projects</h2>
         <hr className="line-title"></hr>
-        <div id="projects" className="timeline">
+        <div className="timeline">
           <ul>
             {this.state.details.map((detail) => {
               return (

@@ -2,78 +2,76 @@
     display: flex !important;
 } */
 .technologies-container {
-    /* background-color: yellowgreen; */
-    width: 100%;
-    padding-top: 50px;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit,minmax(440px,1fr));
-    grid-row: auto;
-    grid-gap: 0 40px;
-    margin: 50px auto;
-    padding: 40px;
+  /* background-color: yellowgreen; */
+  width: 100%;
+  padding-top: 50px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-row: auto;
+  grid-gap: 0 40px;
+  margin: 50px auto;
+  padding: 40px;
 }
 .technologies-container .technologies-card {
-    position: relative;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    background: transparent;
+  position: relative;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  background: transparent;
 }
 .technologies-card:hover {
-    background: rgba(255,255,255,0.8);
-    border-radius: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
 }
 
 h1 {
-    font-size: 80px;
+  font-size: 80px;
 }
 h2 {
-    text-align: left;
-
+  text-align: left;
 }
 .technologies-box {
-    position: relative;
-    width: 80%;
-    /* padding: 20px; */
-
+  position: relative;
+  width: 80%;
+  /* padding: 20px; */
 }
 .technologies-box h2 {
-    position: absolute;
-    top:-60px;
-    font-size: 10em;
-    right: 20px;
-    margin: 0;
-    padding: 0;
-    color: rgba(255,255,255,0.4);
-    transition:0.5s;
+  position: absolute;
+  top: -60px;
+  font-size: 10em;
+  right: 20px;
+  margin: 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.4);
+  transition: 0.5s;
 }
 .technologies-card:hover .technologies-box h2 {
-    top:-160px;
+  top: -160px;
 }
 
 @keyframes animate-box {
-    0% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 300% 0;
-    }
-    100% {
-        background-position: 0 0;
-    }
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 pre {
-    overflow-x: auto;
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
-    color:#fff;
- }
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  color: #fff;
+}

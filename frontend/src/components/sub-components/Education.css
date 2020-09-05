@@ -9,12 +9,15 @@
   justify-content: center;
   align-items: center;
   display: grid !important;
-  grid-template-columns: repeat(2, minmax(540px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(620px, 1fr));
   grid-row: auto;
   grid-gap: 0 40px;
   margin: 50px auto;
   padding: 40px;
   z-index: 0;
+}
+h2 {
+  padding-top: 100px;
 }
 .education-container .box {
   position: relative;
@@ -23,6 +26,7 @@
   justify-content: center;
   align-items: center;
   background-color: transparent;
+  margin: 20px;
   background: linear-gradient(90deg, #050505, #262626);
 }
 .education-container .box:last-child {
@@ -50,6 +54,8 @@
   top: -60px;
   font-size: 10em;
   right: 20px;
+  left: 20px;
+  text-align: center;
   margin: 0;
   padding: 0;
   color: rgba(255, 255, 255, 0.4);

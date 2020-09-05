@@ -96,6 +96,18 @@ class Info(models.Model):
         return self.title
 
 
+class SocialMedia(models.Model):
+    title = models.CharField(max_length=50)
+    icon = models.ImageField(
+        upload_to='media/cv/social',
+        blank=True,
+        null=True)
+    order = models.IntegerField(unique=True, null=True)
+    disabled = models.BooleanField(default=True)
+    icon_code = models.CharField(max_length=50)
+    link = models.CharField(max_length=550)
+
+
 class Project(models.Model):
     title = models.CharField(max_length=150)
     description = models.TextField()

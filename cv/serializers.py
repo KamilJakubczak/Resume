@@ -1,6 +1,6 @@
 
 from rest_framework import serializers
-from .models import Position, Company, Project
+from .models import Position, Company, Project, SocialMedia
 from .models import Education, Course, Skill, Info
 
 
@@ -57,4 +57,10 @@ class InfoSerializer(serializers.ModelSerializer):
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
+        exclude = ['id', 'disabled', 'order']
+
+
+class SocialMediaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SocialMedia
         exclude = ['id', 'disabled', 'order']
