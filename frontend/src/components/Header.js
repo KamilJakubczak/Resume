@@ -18,7 +18,7 @@ class Header extends Component {
               <a href="#experience" className="p-2">
                 Experience
               </a>
-              <a href="#technologies" className="p-2">
+              <a href="#tech" className="p-2">
                 Technologies
               </a>
               <a href="#education" className="p-2">
