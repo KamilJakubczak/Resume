@@ -31,9 +31,7 @@ class Projects extends Component {
                     <h3>{detail.link}</h3>
                     <pre>{detail.description}</pre>
                   </div>
-                  <div className="time">
-                    <h4>DATA!!!</h4>
-                  </div>
+                  <div className="time">{/* <h4>DATA!!!</h4> */}</div>
                   <hr></hr>
                 </li>
               );
