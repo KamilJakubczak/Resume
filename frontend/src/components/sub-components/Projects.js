@@ -24,7 +24,7 @@ class Projects extends Component {
           <ul>
             {this.state.details.map((detail) => {
               return (
-                <li>
+                <li key={"project-" + detail.id}>
                   <hr></hr>
                   <div className="timeline-content">
                     <h3>{detail.title}</h3>

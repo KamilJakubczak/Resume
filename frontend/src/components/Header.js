@@ -30,13 +30,13 @@ class Header extends Component {
             </div>
           </nav> */}
 
-          <nav class="navbar navbar-expand-lg navbar-dark">
+          <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
             <div>
               <h3 className=" logo">Kamil Jakubczak</h3>
               <div className="logo line"></div>
             </div>
             <a
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-toggle="collapse"
               data-target="#navbarNav"
@@ -44,11 +44,11 @@ class Header extends Component {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <div class="navbar-toggler-icon"></div>
+              <div className="navbar-toggler-icon"></div>
             </a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item active">
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item active">
                   <a href="#about" className="p-2">
                     About
                   </a>

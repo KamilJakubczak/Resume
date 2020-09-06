@@ -24,7 +24,7 @@ class Experience extends Component {
           <ul>
             {this.state.details.map((detail) => {
               return (
-                <li>
+                <li key={"experience-" + detail.id}>
                   <hr></hr>
                   <div className="timeline-content">
                     <h3>{detail.position_title}</h3>

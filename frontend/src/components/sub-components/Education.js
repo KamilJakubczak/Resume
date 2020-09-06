@@ -22,7 +22,11 @@ class Education extends Component {
         <div className="education-container">
           {this.state.details.map((detail) => {
             return (
-              <div id="id-{detail.order}" className="box">
+              <div
+                key={"education-" + detail.id}
+                id="id-{detail.order}"
+                className="box"
+              >
                 <div className="content-box">
                   <h2>{detail.school_name}</h2>
                   <h4>{detail.course_name}</h4>

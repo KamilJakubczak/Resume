@@ -37,7 +37,7 @@ a:before {
   left: -5%;
   right: -5%;
   bottom: -5%;
-  z-index: -1;
+  /* z-index: -1; */
   background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
   background-size: 400%;
   border-radius: 40px;
@@ -51,7 +51,8 @@ a:hover:before {
 }
 
 nav {
-  /* margin-left: 50px; */
+  margin-left: 2%;
+  margin-right: 2%;
   padding-left: 0 !important;
   padding-top: 10px;
   margin-top: 0 !important;
