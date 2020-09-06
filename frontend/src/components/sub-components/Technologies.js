@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import "./Technologies.css";
 
 class Technologies extends Component {
@@ -16,10 +16,10 @@ class Technologies extends Component {
   }
   render() {
     return (
-      <div>
-        <h2 id="#technologies">Technologies</h2>
+      <Fragment>
+        <h2 id="tech">Technologies</h2>
         <hr className="line-title"></hr>
-        <div id="technologies" className="technologies-container">
+        <div className="technologies-container">
           {this.state.details.map((detail) => {
             console.log(detail.order);
             return (
@@ -41,7 +41,7 @@ class Technologies extends Component {
             );
           })}
         </div>
-      </div>
+      </Fragment>
     );
   }
 }

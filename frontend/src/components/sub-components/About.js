@@ -30,7 +30,7 @@ class About extends Component {
         <div className="about-container">
           {this.state.details.map((detail) => {
             return (
-              <div>
+              <div key={"about-" + detail.id}>
                 <div className="about-content-box">
                   <div className="img-box">
                     <img src={detail.icon} />
@@ -43,7 +43,10 @@ class About extends Component {
                       </div>
                       {this.state.socialMedia.map((media) => {
                         return (
-                          <div className="contact-point">
+                          <div
+                            key={"media-" + media.id}
+                            className="contact-point"
+                          >
                             <a href={media.link} target="_blank">
                               <h3>
                                 <i className={media.icon_code}></i>

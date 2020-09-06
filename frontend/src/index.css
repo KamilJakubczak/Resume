@@ -13,7 +13,8 @@ body {
 
   height: vh100;
   width: 100%;
-  background: linear-gradient(90deg, #000, #262626, #000);
+  /* background: linear-gradient(90deg, #000, #262626, #000); */
+  background-color: #030303;
   z-index: -9;
   display: -ms-flexbox;
   display: flex;

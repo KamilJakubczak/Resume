@@ -26,7 +26,7 @@ class PositionSerializer(serializers.ModelSerializer):
 class EducationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Education
-        exclude = ['id', 'disabled', 'order']
+        exclude = ['disabled', 'order']
 
 #  class ProviderSerializer(serializers.ModelSerializer):
 #      class Meta:
@@ -39,28 +39,28 @@ class CourseSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Course
-        exclude = ['id', 'disabled', 'order']
+        exclude = ['disabled', 'order']
 
 
 class SkillSerializer(serializers.ModelSerializer):
     class Meta:
         model = Skill
-        exclude = ['id', 'disabled', 'order']
+        exclude = ['disabled', 'order']
 
 
 class InfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Info
-        exclude = ['id', 'disabled', 'order']
+        exclude = ['disabled', 'order']
 
 
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        exclude = ['id', 'disabled', 'order']
+        exclude = ['disabled', 'order']
 
 
 class SocialMediaSerializer(serializers.ModelSerializer):
     class Meta:
         model = SocialMedia
-        exclude = ['id', 'disabled', 'order']
+        exclude = ['disabled', 'order']

@@ -140,5 +140,6 @@ pre {
   display: flex;
 }
 ul {
+  width: 100%;
   display: inline-block;
 }

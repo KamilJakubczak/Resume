@@ -6,7 +6,7 @@ class Header extends Component {
     return (
       <React.Fragment>
         <header>
-          <nav className="nav navbar-expand-lg fixed-top">
+          {/* <nav className="nav navbar-expand-lg fixed-top">
             <div className="logo-wrap">
               <h3 className=" logo">Kamil Jakubczak</h3>
               <div className="logo line"></div>
@@ -18,7 +18,7 @@ class Header extends Component {
               <a href="#experience" className="p-2">
                 Experience
               </a>
-              <a href="#technologies" className="p-2">
+              <a href="#tech" className="p-2">
                 Technologies
               </a>
               <a href="#education" className="p-2">
@@ -27,6 +27,53 @@ class Header extends Component {
               <a href="#projects" className="p-2">
                 Projects
               </a>
+            </div>
+          </nav> */}
+
+          <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div>
+              <h3 className=" logo">Kamil Jakubczak</h3>
+              <div className="logo line"></div>
+            </div>
+            <a
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <div className="navbar-toggler-icon"></div>
+            </a>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item active">
+                  <a href="#about" className="p-2">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="#experience" className="p-2">
+                    Experience
+                  </a>
+                </li>
+                <li>
+                  <a href="#tech" className="p-2">
+                    Technologies
+                  </a>
+                </li>
+                <li>
+                  <a href="#education" className="p-2">
+                    Education
+                  </a>
+                </li>
+                <li>
+                  <a href="#projects" className="p-2">
+                    Projects
+                  </a>
+                </li>
+              </ul>
             </div>
           </nav>
         </header>

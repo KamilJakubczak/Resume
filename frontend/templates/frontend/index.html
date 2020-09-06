@@ -40,21 +40,23 @@
   <script src="{% static "frontend/main.js" %}"></script>
   <script>
     // PROGRESSBAR
-    let progress = document.getElementById('progressbar');
-    let totalHeight = document.body.scrollHeight - window.innerHeight;
-        window.onscroll = () => {
+    window.onload = () => {
+      const progress = document.getElementById('progressbar');
+      const totalHeight = document.body.scrollHeight - window.innerHeight;
 
-    let progressHeight = (window.pageYOffset / totalHeight * 100);
-    progress.style.height = progressHeight + "%";
-
-  }
-  // BTN EFFECTS
+      window.onscroll = () => {
+        const progressHeight = (window.pageYOffset / totalHeight * 100);
+        progress.style.height = progressHeight + "%";
+      }
+    }
+// BTN EFFECTS
   const buttons = document.querySelectorAll('a');
 
     buttons.forEach(btn=>{
 
       btn.addEventListener('click', function(e){
-        let x = e.clientX-e.target.offsetLeft;
+
+        let x = e.path[0].offsetWidth/2 //e.clientX-e.target.offsetLeft;
         let y = e.clientY-e.target.offsetTop;
 
         let ripples = document.createElement('span');
