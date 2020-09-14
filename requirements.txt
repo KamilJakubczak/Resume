@@ -7,3 +7,5 @@ gunicorn
 django-heroku
 dj-database-url
 whitenoise
+boto3
+django-storages
