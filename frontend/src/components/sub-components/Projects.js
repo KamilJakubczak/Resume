@@ -28,7 +28,7 @@ class Projects extends Component {
                   <hr></hr>
                   <div className="timeline-content">
                     <h3>{detail.title}</h3>
-                    <h3>{detail.link}</h3>
+                    <a href={details.title}>{detail.link}</a>
                     <pre>{detail.description}</pre>
                   </div>
                   <div className="time">{/* <h4>DATA!!!</h4> */}</div>
